@@ -1,4 +1,7 @@
 # Pipeline_Migrataion_from_Jenkins_to_GitHubActions <br>
+# Reference Link :
+https://docs.github.com/en/actions/migrating-to-github-actions/automated-migrations/migrating-from-jenkins-with-github-actions-importer
+
 # Install Jenkins <br>
 sudo apt update -y && sudo apt install default-jdk -y && sudo apt install default-jre -y <br>
 wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add - <br>
@@ -9,6 +12,7 @@ sudo apt update -y <br>
 sudo apt install jenkins -y <br>
 sudo systemctl status jenkins <br>
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword <br>
+Install the Paginated Builds plugin in Jenkins GUI <br>
 
 # Install Docker <br>
 curl https://get.docker.com/ | sudo bash <br>
