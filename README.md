@@ -40,10 +40,12 @@ gh actions-importer forecast jenkins --output-dir tmp/forecast <br>
 
 # Syntax <br>
 gh actions-importer dry-run jenkins --source-url my-jenkins-project --output-dir tmp/dry-run <br>
+
 # Example with job named as Pipeline_1 <br>
 gh actions-importer dry-run jenkins --source-url http://54.92.219.56:8080/job/Pipeline_1/ --output-dir tmp/dry-run <br>
 # Syantx <br>
 gh actions-importer migrate jenkins --target-url https://github.com/:owner/:repo --output-dir tmp/migrate --source-url my-jenkins-project <br>
+# Example with job named as Pipeline_1 <br>
 gh actions-importer migrate jenkins --target-url https://github.com/sreeharsha-alluri/Pipeline_Migrataion- _from_Jenkins_to_GitHubActions.git --output-dir tmp/migrate --source-url http://54.92.219.56:8080/job/Pipeline_1/ <br>
 # Example with job named as Test <br>
 gh actions-importer dry-run jenkins --source-url http://54.92.219.56:8080/job/Test/ --output-dir tmp/dry-run <br>
