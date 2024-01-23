@@ -24,10 +24,11 @@ gh --version <br>
 # Authenticate with GitHub <br>
 gh auth login <br>
 
-#Install the GitHub Actions Importer CLI extension
-gh extension install github/gh-actions-importer
+# Install the GitHub Actions Importer CLI extension <br>
+gh extension install github/gh-actions-importer <br>
 
-#Verify that the extension is installed
-gh actions-importer -h
-gh actions-importer configure
+# Verify that the extension is installed <br>
+gh actions-importer -h <br>
+gh actions-importer configure <br>
+
 
