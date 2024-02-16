@@ -1,0 +1,33 @@
+name: docker_new
+on:
+  workflow_dispatch:
+jobs:
+  Pull_Docker_Image:
+    name: Pull Docker Image
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4.1.0
+    - name: sh
+      shell: bash
+      run: sudo docker pull alpine:latest
+  Run_Docker_Image:
+    name: Run Docker Image
+    runs-on: ubuntu-latest
+    needs: Pull_Docker_Image
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4.1.0
+    - name: sh
+      shell: bash
+      run: sudo docker run --rm alpine:latest echo "Hello, world!"
+  Clean_Up_Workspace:
+    name: Clean Up Workspace
+    runs-on: ubuntu-latest
+    needs: Run_Docker_Image
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4.1.0
+    - name: delete directory
+      shell: bash
+      run: rm -rf "`pwd`"
