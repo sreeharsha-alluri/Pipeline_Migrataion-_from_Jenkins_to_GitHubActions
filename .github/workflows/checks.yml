@@ -1,0 +1,60 @@
+name: checks
+on:
+  workflow_dispatch:
+jobs:
+  Check_OS:
+    name: Check OS
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4.1.0
+#     # 'script' was not transformed because there is no suitable equivalent in GitHub Actions
+#     - name: script
+#       arguments:
+#       - key: scriptBlock
+#         value:
+#           isLiteral: true
+#           value: |-
+#             if (isUnix()) {
+#                                     sh 'cat /etc/os-release'
+#                                 } else {
+#                                     echo 'Unsupported OS'
+#                                 }
+  Check_Disk_Space:
+    name: Check Disk Space
+    runs-on: ubuntu-latest
+    needs: Check_OS
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4.1.0
+#     # 'script' was not transformed because there is no suitable equivalent in GitHub Actions
+#     - name: script
+#       arguments:
+#       - key: scriptBlock
+#         value:
+#           isLiteral: true
+#           value: |-
+#             if (isUnix()) {
+#                                     sh 'df -h'
+#                                 } else {
+#                                     echo 'Unsupported OS'
+#                                 }
+  Check_CPU:
+    name: Check CPU
+    runs-on: ubuntu-latest
+    needs: Check_Disk_Space
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4.1.0
+#     # 'script' was not transformed because there is no suitable equivalent in GitHub Actions
+#     - name: script
+#       arguments:
+#       - key: scriptBlock
+#         value:
+#           isLiteral: true
+#           value: |-
+#             if (isUnix()) {
+#                                     sh 'lscpu'
+#                                 } else {
+#                                     echo 'Unsupported OS'
+#                                 }
